@@ -53,7 +53,7 @@ jobs:
       - name: Verify the three game executables are loadable
         if: env.XEX_TOKEN != ''
         run: |
-          API=https://api.github.com/mangodep80-rgb/pinyon-shift-android
+          API=https://api.github.com/mangodep80-rgb/repos/pinyon-shift-android
           mkdir -p .local/game/base .local/logs
           curl -sf -H "Authorization: token $XEX_TOKEN" "$API/releases/tags/v1.0" -o /tmp/release.json
           python3 - <<'PY'
